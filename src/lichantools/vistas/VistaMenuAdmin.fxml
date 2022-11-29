@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="640.0" prefWidth="1200.0" styleClass="border_pane" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lichantools.controladores.admin.ControladorMenuAdmin">
+    <stylesheets>
+        <URL value="@../css/menu.css" />
+    </stylesheets>
+    <center>
+      <FlowPane columnHalignment="CENTER" hgap="40.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="215.0" prefWidth="540.0" vgap="35.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button alignment="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#accionAdministrarHerr" prefHeight="90.0" prefWidth="250.0" styleClass="boton_prestamo_normal" text="Administrar herramientas" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Cantarell Bold" size="19.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" defaultButton="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#accionAdministrarPañoles" prefHeight="90.0" prefWidth="250.0" styleClass="boton_prestamo_normal" text="Administrar pañoles" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Cantarell Bold" size="19.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" disable="true" mnemonicParsing="false" onAction="#accionAdministrarPresGen" prefHeight="90.0" prefWidth="250.0" styleClass="boton_prestamo_generico" text="Administrar préstamos genéricos" textAlignment="CENTER" textFill="WHITE" visible="false" wrapText="true">
+               <font>
+                  <Font name="Cantarell Bold" size="19.0" />
+               </font>
+            </Button>
+         </children>
+      </FlowPane>
+   </center>
+   <top>
+      <AnchorPane BorderPane.alignment="TOP_RIGHT">
+         <BorderPane.margin>
+            <Insets left="50.0" right="50.0" top="40.0" />
+         </BorderPane.margin>
+         <children>
+            <Text fx:id="texto_institucion" layoutX="440.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Nombre de institución" textAlignment="RIGHT" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <VBox alignment="CENTER" layoutX="906.0" spacing="5.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Text fx:id="texto_nombre_usuario" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Nombre de usuario" textAlignment="RIGHT">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <HBox alignment="CENTER_RIGHT">
+                     <children>
+                        <FontAwesomeIconView glyphName="WRENCH" size="15">
+                           <HBox.margin>
+                              <Insets right="4.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <Text fx:id="texto_tipo_usuario" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="ADMINISTRADOR" textAlignment="RIGHT">
+                           <font>
+                              <Font name="Cantarell Regular" size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <Button fx:id="logout_button" alignment="CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#logoutAction" prefHeight="59.0" prefWidth="175.0" styleClass="boton_cerrar_sesion" text="CERRAR SESIÓN" BorderPane.alignment="BOTTOM_RIGHT">
+         <BorderPane.margin>
+            <Insets bottom="40.0" right="50.0" />
+         </BorderPane.margin>
+         <HBox.margin>
+            <Insets />
+         </HBox.margin>
+         <font>
+            <Font name="Cantarell Regular" size="13.0" />
+         </font>
+      </Button>
+   </bottom>
+   <HBox.margin>
+      <Insets right="50.0" />
+   </HBox.margin>
+</BorderPane>

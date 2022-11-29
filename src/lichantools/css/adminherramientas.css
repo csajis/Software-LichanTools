@@ -1,0 +1,19 @@
+.mainFxmlClass {
+    -fx-background-color: #fcfcfc;
+}
+
+.text-field{
+    -fx-background-radius: 8px;
+}
+
+.text-field:focused{
+    -fx-focus-color: transparent;
+}
+
+.table-view:focused{
+    -fx-background-color: -fx-control-inner-background;
+}
+
+.vbox .hbox .label{
+    -fx-background-color: black;
+}

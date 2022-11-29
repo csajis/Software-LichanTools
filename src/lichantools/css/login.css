@@ -1,0 +1,14 @@
+.text-field:focused{
+    -fx-opacity: 0.95;
+}
+
+.boton_aceptar{
+    -fx-background-color: #4CACA4;
+    -fx-text-fill: white;
+}
+
+.boton_aceptar:hover{
+    -fx-background-color:  #23C9AE;
+}
+
+

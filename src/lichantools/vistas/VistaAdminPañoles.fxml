@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane stylesheets="@../css/aplicacion.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lichantools.controladores.admin.ControladorAdministrarPañoles">
+   <children>
+      <AnchorPane id="AnchorPane" minHeight="640.0" minWidth="1200.0" styleClass="pane" stylesheets="@../css/aplicacion.css">
+         <children>
+            <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <tabs>
+                <Tab text="Modificar pañoles">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <HBox alignment="CENTER" layoutX="20.0" layoutY="20.0" minWidth="800.0" spacing="50.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="20.0">
+                                 <children>
+                                    <VBox minWidth="500.0" spacing="8.0">
+                                       <children>
+                                          <Label styleClass="text" text="Ingrese nombre o especialidad de pañol">
+                                             <font>
+                                                <Font name="Cantarell Oblique" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="filtro_pañoles" styleClass="textfield" />
+                                          <TableView fx:id="tab_pañoles" minWidth="500.0" styleClass="tabla" VBox.vgrow="ALWAYS">
+                                            <columns>
+                                              <TableColumn fx:id="tab_pañol_nombre" maxWidth="1.7976931348623157E308" minWidth="400.0" prefWidth="-1.0" text="Nombre" />
+                                              <TableColumn fx:id="tab_pañol_esp" maxWidth="1.7976931348623157E308" minWidth="120.0" prefWidth="-1.0" text="Especialidad" />
+                                            </columns>
+                                          </TableView>
+                                       </children>
+                                    </VBox>
+                                    <VBox spacing="30.0">
+                                       <children>
+                                          <VBox maxHeight="350.0" minWidth="400.0" spacing="20.0" style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
+                                             <children>
+                                                <VBox>
+                                                   <children>
+                                                      <Label styleClass="text" text="Nombre" />
+                                                      <TextField fx:id="campo_nombre" styleClass="textfield" />
+                                                   </children>
+                                                </VBox>
+                                                <VBox>
+                                                   <children>
+                                                      <Label styleClass="text" text="Ubicación" />
+                                                      <TextField fx:id="campo_ubicacion" styleClass="textfield" />
+                                                   </children>
+                                                </VBox>
+                                                <VBox>
+                                                   <children>
+                                                      <Label styleClass="text" text="Especialidad" />
+                                                      <ComboBox fx:id="selector_especialidad" prefWidth="150.0" styleClass="combobox" />
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                             <padding>
+                                                <Insets left="15.0" right="10.0" top="15.0" />
+                                             </padding>
+                                          </VBox>
+                                          <HBox alignment="CENTER" spacing="35.0">
+                                             <children>
+                                                <Button fx:id="boton_modificar" disable="true" minHeight="40.0" minWidth="90.0" mnemonicParsing="false" onAction="#accionModificarPañol" styleClass="boton" text="Modificar" />
+                                                <Button fx:id="boton_eliminar" disable="true" layoutX="103.0" layoutY="10.0" minHeight="40.0" minWidth="90.0" mnemonicParsing="false" onAction="#accionEliminarPañol" styleClass="boton" text="Eliminar" />
+                                                <Button minHeight="40.0" minWidth="90.0" mnemonicParsing="false" onAction="#accionCancelar" styleClass="boton_cancelar" text="Cancelar" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets top="25.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Crear nuevo pañol">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <HBox spacing="40.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+                                 <children>
+                                    <VBox maxHeight="350.0" minWidth="400.0" spacing="20.0" style="-fx-background-color: white;">
+                                       <children>
+                                          <VBox>
+                                             <children>
+                                                <Label styleClass="text" text="Nombre" />
+                                                <TextField fx:id="campo_crear_nombre" styleClass="textfield" />
+                                             </children>
+                                          </VBox>
+                                          <VBox>
+                                             <children>
+                                                <Label styleClass="text" text="Ubicación" />
+                                                <TextField fx:id="campo_crear_ubicacion" styleClass="textfield" />
+                                             </children>
+                                          </VBox>
+                                          <VBox>
+                                             <children>
+                                                <Label styleClass="text" text="Especialidad" />
+                                                <ComboBox fx:id="selector_crear_especialidad" prefWidth="150.0" styleClass="combobox" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <padding>
+                                          <Insets left="15.0" right="10.0" top="15.0" />
+                                       </padding>
+                                    </VBox>
+                                    <Button minHeight="40.0" minWidth="90.0" mnemonicParsing="false" onAction="#accionCrearPañol" styleClass="boton" text="Crear pañol" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="Gestionar herramientas de pañoles">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <HBox spacing="20.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                                 <children>
+                                    <VBox minWidth="500.0" spacing="8.0">
+                                       <children>
+                                          <Label styleClass="text" text="Ingrese nombre o especialidad de pañol">
+                                             <font>
+                                                <Font name="Cantarell Oblique" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="filtro_pañoles_gestion" styleClass="textfield" />
+                                          <TableView fx:id="tab_pañoles_gestion" minWidth="500.0" styleClass="tabla" VBox.vgrow="ALWAYS">
+                                             <columns>
+                                                <TableColumn fx:id="tab_pañol_nombre_gestion" maxWidth="1.7976931348623157E308" minWidth="400.0" prefWidth="-1.0" text="Nombre" />
+                                                <TableColumn fx:id="tab_pañol_esp_gestion" maxWidth="1.7976931348623157E308" minWidth="120.0" prefWidth="-1.0" text="Especialidad" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </VBox>
+                                    <VBox spacing="10.0">
+                                       <children>
+                                          <HBox maxHeight="300.0" minHeight="200.0" spacing="20.0">
+                                             <children>
+                                                <VBox spacing="5.0">
+                                                   <children>
+                                                      <Label text="Ingrese nombre de herramienta">
+                                                         <font>
+                                                            <Font name="System Italic" size="13.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="filtro_herr" styleClass="textfield" />
+                                                      <TableView fx:id="tab_herr" minWidth="400.0" styleClass="tabla">
+                                                         <columns>
+                                                            <TableColumn fx:id="tab_herr_nombre" maxWidth="1.7976931348623157E308" minWidth="250.0" prefWidth="-1.0" sortable="false" text="Herramienta" />
+                                                            <TableColumn fx:id="tab_herr_car" maxWidth="1.7976931348623157E308" minWidth="150.0" prefWidth="-1.0" sortable="false" text="Características" />
+                                                         </columns>
+                                                      </TableView>
+                                                   </children>
+                                                </VBox>
+                                                <VBox spacing="15.0">
+                                                   <children>
+                                                      <VBox>
+                                                         <children>
+                                                            <Label text="Stock total" />
+                                                            <TextField fx:id="campo_stockt" styleClass="textfield" />
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox>
+                                                         <children>
+                                                            <Label text="Stock real" />
+                                                            <TextField fx:id="campo_stockr" styleClass="textfield" />
+                                                         </children>
+                                                      </VBox>
+                                                      <Button mnemonicParsing="false" onAction="#accionAgregarHerr" styleClass="boton" text="agregar herramienta" />
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                          <TableView fx:id="tab_herr_pañol" layoutX="10.0" layoutY="10.0" minWidth="500.0" styleClass="tabla">
+                                             <columns>
+                                                <TableColumn fx:id="tab_herr_pañol_nombre" maxWidth="1.7976931348623157E308" minWidth="270.0" prefWidth="-1.0" sortable="false" text="Herramienta" />
+                                                <TableColumn fx:id="tab_herr_pañol_stockt" maxWidth="-1.0" minWidth="120.0" prefWidth="-1.0" sortable="false" styleClass="right-column" text="Stock total" />
+                                                <TableColumn fx:id="tab_herr_pañol_stockr" maxWidth="-1.0" minWidth="120.0" prefWidth="-1.0" sortable="false" styleClass="right-column" text="Stock real" />
+                                                <TableColumn fx:id="tab_herr_pañol_eliminar" maxWidth="-1.0" minWidth="120.0" prefWidth="-1.0" sortable="false" text="Eliminar" />
+                                             </columns>
+                                          </TableView>
+                                          <HBox alignment="CENTER">
+                                             <children>
+                                                <Button minHeight="40.0" mnemonicParsing="false" onAction="#accionConfirmarMod" styleClass="boton" text="confirmar modificaciones" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+      <HBox fx:id="caja_mensaje" alignment="CENTER" opacity="0.95" visible="false">
+         <children>
+            <Label fx:id="mensaje" styleClass="caja_mensaje" textAlignment="CENTER" wrapText="true">
+               <padding>
+                  <Insets bottom="15.0" left="30.0" right="50.0" top="15.0" />
+               </padding>
+               <font>
+                  <Font name="Cantarell Regular" size="18.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView glyphName="CHECK" size="18" styleClass="check_icon">
+               <HBox.margin>
+                  <Insets left="-40.0" top="5.0" />
+               </HBox.margin>
+            </FontAwesomeIconView>
+         </children>
+      </HBox>
+   </children>
+</StackPane>

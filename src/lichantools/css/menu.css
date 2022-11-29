@@ -1,0 +1,66 @@
+text{
+    -fx-text-fill: #413E58;
+}
+
+.border_pane{
+    -fx-background-color: radial-gradient(focus-angle 325deg, focus-distance 65%, center 50% 50%, radius 100%, #eee, #f3f3f3, #fcfcfc, #fdfdfd);
+}
+
+.boton_prestamo_generico{
+    -fx-background-color:  linear-gradient(to bottom right,  #237B97,  #237B97);
+}
+
+.boton_prestamo_normal{
+    -fx-background-color: linear-gradient(to bottom right,   #237B97,    #237B97);
+}
+
+.boton_devolucion{
+    -fx-background-color: linear-gradient(to bottom right,  #237B97,  #237B97);
+}
+
+.boton_actualizar_stock{
+    -fx-background-color: linear-gradient(to bottom right,   #237B97,   #237B97);
+}
+
+.boton_prestamo_generico:hover,
+.boton_prestamo_normal:hover,
+.boton_devolucion:hover,
+.boton_actualizar_stock:hover{
+    -fx-background-color: linear-gradient(to bottom right,  #6CCD7E,  #6CCD7E);
+}
+
+.boton_cerrar_sesion{
+    -fx-background-color: white;
+    -fx-background-color: 
+        white,
+        linear-gradient(#F16972, #F16972),
+        white;
+    -fx-background-radius: 8;
+}
+
+.boton_cerrar_sesion:hover{
+    -fx-background-color: #F16972;
+    -fx-text-fill: white;
+}
+
+.boton_generar_nomina{
+    -fx-text-fill: #6CCD7E;
+    -fx-background-color: 
+       white,
+       linear-gradient(#6CCD7E, #6CCD7E),
+       white;
+    -fx-weight: bold;
+}
+
+.boton_generar_nomina:hover{
+    -fx-background-color: #6CCD7E;
+    -fx-text-fill: white;
+}
+
+.icono_excel{
+    -fx-fill: #6CCD7E;
+}
+
+.icono_excel:hover{
+    -fx-fill: white;
+}
